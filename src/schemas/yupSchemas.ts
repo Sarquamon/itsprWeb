@@ -13,8 +13,16 @@ export const yupLoginSchema = yup.object({
 });
 
 export const yupRegisterSchema = yup.object({
-  curp: yup.string().required(requiredField),
-  rfc: yup.string().optional(),
+  curp: yup
+    .string()
+    .min(8, "El CURP consiste de 8 caracteres")
+    .max(8, "El CURP no sobre pasa de 8 caracteres")
+    .required(requiredField),
+  rfc: yup
+    .string()
+    .min(12, "El RFC consiste de 12 o 13 caracteres")
+    .max(13, "El RFC no sobre pasa de 13 caracteres")
+    .optional(),
   email: yup.string().email(validEmail).required(requiredField),
   password: yup
     .string()
