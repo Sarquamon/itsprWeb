@@ -1,13 +1,12 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import { Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { yupLoginSchema } from "../schemas/yupSchemas";
 import {
   CustomTextField,
   CustomPasswordField,
 } from "../components/customMatUiComp";
-import "./Login/login.css";
-import { Link } from "react-router-dom";
-import { yupLoginSchema } from "../schemas/yupSchemas";
 
 export const Login = () => {
   return (
@@ -55,7 +54,7 @@ export const Login = () => {
                     <button className="customButton">Registrarse</button>
                   </Link>
                   <small>
-                    ¿Olvidaste tu contraseña? recuperala{" "}
+                    ¿Olvidaste tu contraseña? recupérala{" "}
                     <Link to="/forgotpwd">aqui</Link>.
                   </small>
                 </Form>

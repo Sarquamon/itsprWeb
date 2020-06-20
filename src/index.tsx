@@ -11,9 +11,9 @@ const client = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <React.StrictMode>
+    <React.Fragment>
       <Routes />
-    </React.StrictMode>
+    </React.Fragment>
   </ApolloProvider>,
   document.getElementById("root")
 );
